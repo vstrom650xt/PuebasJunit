@@ -14,12 +14,9 @@ class MiscelaneaTest {
 
     @Test
     void generaAleatorioEntre() {
-
+// asi si
         for (int i = 0; i < 1000; i++) {
-            int a = Miscelanea.generaAleatorioEntre(11, 7);
-
-            assertEquals(a <= 7 || a >= 3, Miscelanea.generaAleatorioEntre(11, 7));
-
+            assertTrue(Miscelanea.generaAleatorioEntre(11, 7) <= 11 && Miscelanea.generaAleatorioEntre(11, 7) >= 7);
         }
     }
 
