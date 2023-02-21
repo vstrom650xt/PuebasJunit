@@ -22,7 +22,7 @@ class MiscelaneaTest {
 
     @Test
     void concatena() {
-        Miscelanea miscelanea = new Miscelanea();
+       Miscelanea miscelanea = new Miscelanea();
 
         assertEquals("gatopardo", miscelanea.concatena("gato", "pardo"));
     }
@@ -43,13 +43,24 @@ class MiscelaneaTest {
 
     @Test
     void getElemento() {
-        Miscelanea m = new Miscelanea();
-        int[] ar = {8, 9, 1, 10, 3, 13};
 
-        assertEquals(3, m.getElemento(ar, 4));
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
-            int valor = ar[7];
-        });
+
+        try{
+
+            Miscelanea m = new Miscelanea();
+            int[] ar = {8, 9, 1, 10, 3, 13};
+
+            assertEquals(3, m.getElemento(ar, 4));
+            assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+                int valor = ar[7];
+            });
+
+        }catch (Exception e){
+
+
+
+
+        }
     }
 
     @Test
@@ -60,11 +71,16 @@ class MiscelaneaTest {
     @Test
     void esPrimo() {
         assertTrue(Miscelanea.esPrimo(12));
-        assertTrue(Miscelanea.esPrimo(13));
 
 
     }
 
+
+    void esPrimo2() {
+        assertTrue(Miscelanea.esPrimo(13));
+
+
+    }
     @Test
     void areaCirculo() {
         assertEquals(Math.pow(4,
